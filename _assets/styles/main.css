@@ -1,0 +1,334 @@
+:root {
+    --color-white: #ffffff;
+    --color-green: #11aa9e;
+    --color-black: #000000;
+}
+
+@font-face {
+  font-family: "Antro Vectra Bolder";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Antro_Vectra_Bolder.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Myriad_Pro_Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Myriad_Pro_Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/Myriad_Pro_Black.otf") format("opentype");
+}
+
+body {
+    font-family: "Myriad Pro";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--color-white);
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.apresentation-banner {
+    height: 490px;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url('../images/kitchen.jpg') no-repeat center center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.apresentation-banner p {
+    font-size: 1.6rem;
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+
+.apresentation-banner .feature {
+    font-family: "Antro Vectra Bolder";
+    font-size: 5em;
+    color: var(--color-green);
+    letter-spacing: 0em;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.apresentation-banner ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentation-banner ul li {
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+}
+
+.apresentation-banner ul li:not(:last-of-type)::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.whatsapp-section {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-green);
+    padding: 30px 0;
+}
+
+.whatsapp-section .whatsapp-box {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-decoration: none;
+    border: 1px solid var(--color-white);
+    font-size: 1.6rem;
+    padding: 10px 15px 10px 95px;
+    line-height: 1.1em;
+    position: relative;
+    border-radius: 13px;
+}
+
+.whatsapp-section .whatsapp-box::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 52.5px;
+    width: 95px;
+    left: -5px;
+    bottom: -5px;
+    background-color: var(--color-green);
+}
+
+.whatsapp-section .whatsapp-box svg {
+    fill: var(--color-white);
+    margin-right: 15px;
+    position: absolute;
+    bottom: -5%;
+    left: 10px;
+}
+
+.address-section {
+    padding: 50px 0;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.address-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.08em;
+}
+
+.address-section h2::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-green);
+    border-radius: 50%;
+    margin-right: 15px;
+    top: 3px;
+}
+
+.address-section .iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.address-section iframe {
+    width: 200%;
+    height: 200%;
+}
+
+.address-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.08em;
+}
+
+footer {
+    padding: 30px 0;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials .social {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.socials .social svg {
+    fill: var(--color-green);
+}
+
+@media (max-width: 575.98px) {
+    header {
+        padding: 20px 0;
+    }
+
+    .apresentation-banner {
+        height: 300px;
+        padding: 50px 0;
+    }
+
+    .apresentation-banner p {
+        font-size: 4vw;
+        letter-spacing: 0.3em;
+    }
+
+    .apresentation-banner .feature {
+        margin-top: 6vw;
+    }
+
+    .apresentation-banner ul li {
+        font-size: 3.3vw;
+        letter-spacing: 0.05em;
+    }
+
+    .apresentation-banner ul li:not(:last-of-type)::after {
+        margin: 0 1.5vw;
+    }
+
+    .whatsapp-section {
+        padding: 20px 0;
+    }
+
+    .whatsapp-section .whatsapp-box {
+        font-size: 4vw;
+        padding: 5px 10px 5px 13vw;
+        line-height: 1.5em;
+        border-radius: 3.5vw;
+    }
+
+    .whatsapp-section .whatsapp-box::before {
+        content: '';
+        height: 9vw;
+        width: 12vw;
+        left: -1vw;
+        bottom: -1vw;
+        background-color: var(--color-green);
+    }
+
+    .whatsapp-section .whatsapp-box svg {
+        width: 11vw;
+        height: 11vw;
+        bottom: 1vw;
+        left: 1vw;
+    }
+    
+    .address-section {
+        padding: 30px 15px;
+    }
+
+    .address-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .address-section .iframe-container {
+        margin-bottom: 20px;
+        width: 85vw;
+        height: 70vw;
+        border-radius: 5px;
+    }
+
+    .address-section p {
+        font-size: 1rem;
+    }
+
+    .address-section p > span {
+        display: none;
+    }
+
+    footer {
+        padding: 20px 0;
+        height: 100px;
+    }
+
+    .socials .social {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    .socials .social svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .apresentation-banner {
+        height: 370px;
+        padding: 50px 0;
+    }
+
+    .apresentation-banner p {
+        font-size: 1.4rem;
+    }
+
+    .apresentation-banner .feature {
+        margin-top: 40px;
+    }
+
+    .apresentation-banner ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .address-section p > br {
+        display: none;
+    }
+}
